@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Booking - Hyderabad to Agra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      font-family: 'Pacifico', cursive;
+      color: #fbc02d;
+      font-size: 2.3rem;
+      padding: 20px 30px;
+    }
+
+    .container {
+      max-width: 800px;
+      background: white;
+      margin: auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .segment {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .flight-info {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    .flight-info p {
+      margin: 2px 0;
+    }
+
+    .layover {
+      text-align: center;
+      color: #f57c00;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .baggage {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .price-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .book-btn {
+      background-color: #ff6f00;
+      border: none;
+      padding: 12px 24px;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .book-btn:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo / Title -->
+  <div class="header">Travel Tales</div>
+
+  <!-- Flight Container -->
+  <div class="container">
+    <h2>Hyderabad → Agra</h2>
+
+    <div class="segment">
+      <h3>IndiGo 6E 134 • 100% On-time</h3>
+      <div class="flight-info">
+        <div>
+          <p><strong>Departure:</strong></p>
+          <p>08:20 • Tue, 29 Apr</p>
+          <p>HYD - Hyderabad</p>
+          <p>Rajiv Gandhi International Airport</p>
+        </div>
+        <div>
+          <p><strong>Arrival:</strong></p>
+          <p>10:10 • Tue, 29 Apr</p>
+          <p>AMD - Ahmedabad</p>
+          <p>Sardar Vallabhbhai Patel Int. Airport (Terminal 1)</p>
+        </div>
+      </div>
+      <p class="baggage">🧳 Cabin: 7 Kg • Check-in: 15 Kg</p>
+    </div>
+
+    <div class="layover">Change of Planes - 3h 15m layover in Ahmedabad</div>
+
+    <div class="segment">
+      <h3>IndiGo 6E 7145 • 90% On-time</h3>
+      <div class="flight-info">
+        <div>
+          <p><strong>Departure:</strong></p>
+          <p>13:25 • Tue, 29 Apr</p>
+          <p>AMD - Ahmedabad</p>
+        </div>
+        <div>
+          <p><strong>Arrival:</strong></p>
+          <p>15:30 • Tue, 29 Apr</p>
+          <p>AGR - Agra</p>
+          <p>Agra Airport</p>
+        </div>
+      </div>
+      <p class="baggage">🧳 Cabin: 7 Kg • Check-in: 15 Kg</p>
+    </div>
+
+    <div class="price-section">
+      <div class="price">₹9,559</div>
+      <button class="book-btn" onclick="location.href='file:///C:/Users/Namratha%20Kilari/OneDrive/Desktop/TRAVEL%20TALES/summary.html'">Book</button>
+    </div>
+  </div>
+
+
+</body>
+</html>

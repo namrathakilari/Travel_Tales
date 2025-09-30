@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Tales - Choose Travel Type</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+    }
+
+    .header {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 2.5rem;
+      color: #f4c542;
+      font-family: 'Pacifico', cursive;
+    }
+
+    main {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 4rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 800px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.4rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 45%;
+      margin: 1rem;
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background-color: #f4c542;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #f1b400;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      .btn {
+        width: 100%;
+      }
+
+      .container {
+        padding: 3rem 2rem;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .header {
+        font-size: 2rem;
+        left: 20px;
+        top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Travel Tales</div>
+  <main>
+    <div class="container">
+      <h1>Welcome to Travel Tales</h1>
+      <p>Please choose your travel type:</p>
+      <button class="btn" onclick="location.href='file:///C:/Users/Namratha%20Kilari/OneDrive/Desktop/TRAVEL%20TALES/seasonalplaces.html'">🌍 Global Travel</button>
+      <button class="btn" onclick="location.href='file:///C:/Users/Namratha%20Kilari/OneDrive/Desktop/TRAVEL%20TALES/national.html'">🏞️ National Travel</button>
+    </div>
+  </main>
+</body>
+</html>

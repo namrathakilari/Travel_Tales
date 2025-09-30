@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+  <title>The Entire Itinerary</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffbea;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+ .header {
+      position: fixed;
+      top: 20px;
+      left: 30px;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
+      color: #f4c542;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #8b8000;
+      margin-bottom: 40px;
+    }
+    .section {
+      background-color: #fff9cc;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .section h2 {
+      margin-top: 0;
+      color: #6e6700;
+    }
+    .option {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .option input {
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .btn {
+      background-color: #f5e663;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #e6d84d;
+    }
+  </style>
+</head>
+<body>
+<div class="header">Travel Tales</div>
+
+  <div class="container">
+    <h1>The Plan</h1>
+
+    <div class="section">
+      <h2>Hotel Information</h2>
+      <p>You will be staying at the Radisson Hotel in Agra. It is a deluxe King room. Two adults will be allowed. Breakfast and Wi-Fi are included in your package. Check-in is on 29 April at 2:00 pm. The check out is on 4 May at 12:00 pm.The tickets are non-refundable. The base fees is ₹18,585 and the taxes is ₹1,800. With the coupon the discount is ₹500. The total amount is ₹20,885. </p>
+    </div>
+
+    <div class="section">
+      <h2>Flight Bookings</h2>
+      <p>For the trip from Hyderabad to Agra on 29th April, there is a layover. The first flight is at 08:20 from Hyderabad to Ahmedabad in Indigo 6E 134 which will land at 10:10. Then, there is a 3h 15m layover. the next flight is from Ahmedabad to Agra for which the boarding time is 13:25 and landing time is 15:30. The tickets are Partially refundable. The base fees is ₹9,530 and the taxes is ₹1,755. With the coupon the discount is ₹315. The total amount is ₹10,970. E-tickets and boarding passes will be emailed 48 hours before departure.For the return from Agra to Hyderabad on 4th May, there is a layover. The first flight is at 08:20 from Agra to Ahmedabad in Indigo 6E 7031 which will land at 10:10. Then, there is a 2h 5m layover. the next flight is from Ahmedabad to Hyderabad for which the boarding time is 13:25 and landing time is 15:30 in IndiGo 6E 6728. The tickets are Partially refundable. The base fees is ₹8,924 and the taxes is ₹1,561. With the coupon the discount is ₹310. The total amount is ₹10,175. E-tickets and boarding passes will be emailed 48 hours before departure.</p>
+    </div>
+
+    <div class="section">
+      <h2>Tour Guide</h2>
+      <p>A professional tour guide will be assigned to your group and will accompany you to each destination throughout your journey.</p>
+    </div>
+
+ <div class="section">
+      <h2>Cost of flight and hotel bookings</h2>
+      <p>The cost of hotel bookings and flight bookings together for one person is ₹20,885 +₹10,970 = ₹31,855</p>
+    </div>
+
+
+    <div class="section">
+      <h2>Choose an Option:</h2>
+      <form id="itinerary-form">
+        <div class="option">
+          <input type="radio" id="basic" name="option" value="basic" required />
+          <label for="basic"><strong>Pay for Hotel & Flight only</strong> — Complete your booking now with just the essential travel arrangements.</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="full" name="option" value="full" />
+          <label for="full"><strong>Get Full Itinerary + Trip Payment</strong> — Receive a detailed daily travel plan with suggested timings and pay for the entire tour experience in the form of an email.</label>
+        </div>
+
+        <div class="button-container">
+          <button type="submit" class="btn"onclick="location.href='file:///C:/Users/Namratha%20Kilari/OneDrive/Desktop/TRAVEL%20TALES/end.html'">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('itinerary-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const selected = document.querySelector('input[name="option"]:checked');
+      if (selected) {
+        if (selected.value === "basic") {
+          alert("You chose to pay for hotel and flights only. Proceeding to payment...");
+        } else {
+          alert("You chose the full travel itinerary option. The email will be sent in two days...");
+        }
+      } else {
+        alert("Please select an option before continuing.");
+      }
+    });
+  </script>
+</body>
+</html>

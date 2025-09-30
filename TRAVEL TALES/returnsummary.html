@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Tales Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: white;
+      padding: 15px 30px;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #FBC02D;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1 1 45%;
+      min-width: 300px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .refund-card {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .refund-card.purple {
+      background-color: #f3e5f5;
+      border-left: 6px solid #9c27b0;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #212121;
+    }
+
+    .strikethrough {
+      text-decoration: line-through;
+      color: red;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+
+    .continue-btn {
+      background-color: orange;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .timeline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .timeline span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- No box, no card — just a clean header -->
+  <header>
+    Travel Tales
+  </header>
+
+  <div class="container">
+    <!-- Left Column -->
+    <div class="card">
+      <div class="section-title">🛫 Booking Summary</div>
+      <div style="background: #fffde7; border-left: 5px solid #fbc02d; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+        <p><strong>Route:</strong> Agra → Hyderabad</p>
+        <p><strong>Date:</strong> 4 May • <strong>1 Stop</strong> • <strong>7h 10m</strong> • Economy</p>
+        <hr style="margin: 10px 0; border-color: #eee;">
+        <p><strong>08:20</strong> – AGR (IndiGo 6E 7031)</p>
+        <p><strong>10:10</strong> – AMD (Ahmedabad)</p>
+        <p style="color: #999;"><em>2h 5m layover</em></p>
+        <p><strong>13:25</strong> – AMD (IndiGo 6E 6728)</p>
+        <p><strong>15:30</strong> – HYD (Hyderabad)</p>
+      </div>
+
+      <div class="section-title">💰 Fare Summary</div>
+      <div style="background: #e8f5e9; border-left: 5px solid #4caf50; padding: 15px; border-radius: 10px;">
+        <p><strong>Fare Type:</strong> <span style="color: green;">Partially Refundable</span></p>
+        <p><strong>Base Fare:</strong> ₹8,924</p>
+        <p><strong>Taxes & Fees:</strong> ₹1,561</p>
+        <p><strong>Instant Off:</strong> <span style="color: green;">-₹310</span></p>
+        <p class="price" style="margin-top: 10px;">Total Amount: ₹10,175</p>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="card">
+      <div class="section-title">Refund on Cancellation</div>
+      <p>AGR - HYD</p>
+      <div class="timeline">
+        <span>Now<br><small>14:10</small></span>
+        <span>3 May<br><small>08:20</small></span>
+        <span>4 May<br><small>02:20</small></span>
+        <span>Departure<br><small>4 May, 15:55</small></span>
+      </div>
+      <p>₹6706 refund (till 3 May 08:20), then Non-refundable</p>
+
+      <div class="section-title">Not sure of your travel?</div>
+      <p>Get full flexibility with Travel Tales add-ons</p>
+
+      <div class="refund-card">
+        <strong>Free Cancellation with Assured <span style="background: #e1d8fc; padding: 2px 6px; border-radius: 5px; font-size: 12px;">Most Popular</span></strong>
+        <p>✔ Instant refund of approx. ₹11285</p>
+        <a href="#">Know More</a>
+      </div>
+
+      <div class="refund-card purple">
+        <strong>Free Cancellation + Rescheduling with Assured Flex</strong>
+        <p>✔ Instant refund of approx. ₹11285</p>
+        <p style="color: green;"><strong>✔ Full Flexibility</strong> on rescheduling. Change date, airline & even sector for free</p>
+        <a href="#">Know More</a>
+      </div>
+
+      <p class="price">₹10,175</p>
+      <button class="continue-btn"onclick="location.href='file:///C:/Users/Namratha%20Kilari/OneDrive/Desktop/TRAVEL%20TALES/final.html'">Continue</button>
+    </div>
+  </div>
+</body>
+</html>

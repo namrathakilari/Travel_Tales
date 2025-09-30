@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Choose Mode of Travel - Travel Tales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffbea;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .header {
+      position: fixed;
+      top: 20px;
+      left: 30px;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
+      color: #f4c542;
+    }
+
+    .container {
+      margin-top: 50px;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h2 {
+      color: #f4c542;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .travel-option {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .option-btn {
+      padding: 0.9rem 1.2rem;
+      border: 2px solid #f4c542;
+      border-radius: 8px;
+      background-color: #fffbe0;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .option-btn:hover {
+      background-color: #f4c542;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        font-size: 2rem;
+        top: 15px;
+        left: 20px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Travel Tales</div>
+
+  <div class="container">
+    <h2>Which Way of Travel Do You Prefer?</h2>
+    <div class="travel-option">
+      <button class="option-btn" onclick="location.href='file:///C:/Users/Namratha%20Kilari/OneDrive/Desktop/TRAVEL%20TALES/flightdates.html'">✈ Flight</button>
+      <button class="option-btn" onclick="chooseTravel('train')">🚆 Train</button>
+      <button class="option-btn" onclick="chooseTravel('bus')">🚌 Bus</button>
+    </div>
+  </div>
+
+  <script>
+    function chooseTravel(option) {
+      // Redirect or store travel mode selection
+      alert(You selected: ${option.charAt(0).toUpperCase() + option.slice(1)} travel);
+      // Example: window.location.href = ${option}-options.html;
+    }
+  </script>
+
+</body>
+</html>

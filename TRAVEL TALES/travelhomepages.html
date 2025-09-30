@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Tales - Let Us Plan Your Getaway</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .font-logo {
+      font-family: 'Pacifico', cursive;
+    }
+    .font-heading {
+      font-family: 'Pacifico', cursive;
+    }
+    .font-subheading {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+  </style>
+
+</head>
+
+<body class="text-gray-800 bg-white">
+
+  <!-- Navbar -->
+  <nav class="absolute top-0 left-0 w-full z-10 flex items-center justify-between px-8 py-4 bg-transparent">
+    <div class="text-4xl font-logo text-white">Travel Tales</div>
+    <ul class="hidden md:flex space-x-6 text-white uppercase font-semibold text-sm">
+      <li><a href="#" class="text-white hover:text-yellow-300">Home</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-300">Popular Destinations</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-300">Book Your Vacation</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-300">About Travel Tales</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-300">Reviews</a></li>
+    </ul>
+    <a href="file:///C:/Users/kadas/OneDrive/Desktop/travel%20tales/signin.html" class="bg-green-200 hover:bg-green-300 text-gray-800 font-bold px-4 py-2 rounded ml-4">Sign In</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center px-4 relative" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThOCjPt9mxMxIAytmpS3hqFDF4Yjgx5GiaEg&s');">
+    <div class="absolute inset-0 bg-black opacity-30"></div>
+    <div class="relative z-10">
+      <h1 class="text-white text-4xl md:text-6xl font-heading mb-4">Let us plan your getaway.</h1>
+    
+      <div class="mt-10 animate-bounce">
+        <svg class="w-6 h-6 mx-auto text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </div>
+  </header>
+<!-- Popular Destinations Heading -->
+<section class="px-8 py-6 bg-white">
+  <h2 class="text-3xl md:text-4xl font-heading text-gray-800 tracking-wide relative inline-block">
+    Popular Destinations
+    <span class="absolute left-0 -bottom-1 w-full h-1 bg-yellow-300 rounded-md"></span>
+  </h2>
+</section>
+
+<style>
+ nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .stars {
+      color: gold;
+      margin: 10px 0;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .price {
+      color: #1bc4c4;
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #ffdb4d;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .info i {
+      margin-right: 5px;
+    }
+ 
+</style>
+
+<section class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.hTD7YMEJobSp7bgVFpLL7gHaEW?w=326&h=191&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Rome">
+      <div class="stars">★★★★★</div>
+      <div class="title">Italy</div>
+      <div class="info">
+               <span>📍 Rome, Italy</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipMFvt9DUkfvGQkhDUTQK5mUFTKAGwTzp3RqSpAG=w270-h156-n-k-no" alt="Paris">
+      <div class="stars">★★★★★</div>
+      <div class="title">Paris</div>
+           <div class="info">
+        <span>📍 Paris, France</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://static.wixstatic.com/media/055605_65e20a7fcbc54e2e8720adfc2544c35e~mv2.jpg/v1/fill/w_1800,h_1082,al_c,q_85/taj_new_contant_edited.jpg" alt="Agra">
+      <div class="stars">★★★★★</div>
+      <div class="title">Agra</div>
+           <div class="info">
+               <span>📍 Agra, India</span>
+</div>
+    </div>
+ </section>
+
+<section class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4f/54/e5.jpg" alt="Newyork">
+      <div class="stars">★★★★★</div>
+      <div class="title">New York</div>
+           <div class="info">
+        <span>📍 New York, United States of America</span>
+      </div>
+    </div>
+ <!-- Card 2 -->
+    <div class="card">
+      <img src="https://www.worldatlas.com/upload/88/3b/8e/pura-ulun-danu-bratan-temple-bali-indonesia-guitar-photographer.jpg" alt="Bali">
+      <div class="stars">★★★★★</div>
+      <div class="title">Bali</div>
+           <div class="info">
+        <span>📍 Bali, Indonesia</span>
+      </div>
+    </div>
+<!-- Card 3 -->
+    <div class="card">
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/29/7c/95/78/overwater-villas.jpg" alt="Maldives">
+      <div class="stars">★★★★★</div>
+      <div class="title">Maldives</div>
+           <div class="info">
+        <span>📍 Maldives</span>
+      </div>
+    </div>
+ </section>
+
+<section class="cards">
+<!-- Card 1 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/London_Skyline_%28125508655%29.jpeg/960px-London_Skyline_%28125508655%29.jpeg" alt="London">
+      <div class="stars">★★★★★</div>
+      <div class="title">London</div>
+           <div class="info">
+        <span>📍 London, United Kingdom</span>
+      </div>
+    </div>
+<!-- Card 2 -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmtCnEfRklFw6KaJQITZHwkBWQyA4L7j3VAQ&s" alt="Geneva">
+      <div class="stars">★★★★★</div>
+      <div class="title">Geneva</div>
+           <div class="info">
+        <span>📍 Geneva, Switzerland</span>
+      </div>
+    </div>
+<!-- Card 3 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sydney_Australia._%2821339175489%29.jpg/1200px-Sydney_Australia._%2821339175489%29.jpg" alt="Sydney">
+      <div class="stars">★★★★★</div>
+      <div class="title">Sydney</div>
+           <div class="info">
+        <span>📍 Sydney, Australia</span>
+      </div>
+    </div>
+  </section>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .center-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(2px);
+    }
+
+    .book-btn {
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      background: linear-gradient(45deg, #ffe97f, #ffd54f);
+      color: #fffdf5;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2s infinite;
+      margin-top: 1in; 
+      margin-bottom: 1in;
+    }
+
+    .book-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 25px rgba(0, 114, 255, 0.6);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <a href="file:///C:/Users/kadas/OneDrive/Desktop/travel%20tales/choose.html">
+  <button class="book-btn">🌴 Book Your Vacation 🌞</button>
+</a>
+
+   
+  </div>
+<!-- Travel Tales Heading -->
+<section class="px-8 py-6 bg-white">
+  <h2 class="text-3xl md:text-4xl font-heading text-gray-800 tracking-wide relative inline-block">
+    About Travel Tales
+    <span class="absolute left-0 -bottom-1 w-full h-1 bg-yellow-300 rounded-md"></span>
+  </h2>
+</section>
+
+<style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 1rem auto;
+      padding: 2rem;
+      background-color: #fff;
+    }
+h2 {
+  color: #FFFFC5; /* Light Yellow */
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f4b40033;
+  padding-bottom: 0.3rem;
+}
+    p {
+      line-height: 1.8;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.7rem;
+      font-size: 1rem;
+    }
+
+    strong {
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      .about-container {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      p, li {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    
+    <p>Our travel planning platform is designed to help you effortlessly plan your next adventure—whether you're exploring your own country or traveling across the globe. This website which integrates transport( Flights, Buses, Trains) tickets, hotel bookings, the vacation iteration from when the tourists will arrive at the destination to the time when they could check in and at what times they will reach each tourist attraction, the tour guide details who will take the tourists to each spot and the cost of the entire trip from transport tickets, hotel bookings to the tour guide fees (basically the cost of everything will be included which they would spend for the trip). This website will create a hassle-free travel plan for the tourists. Here's how our user-friendly, step-by-step system works:</p>
+
+    <h2>1. Getting Started</h2>
+    <ul>
+      <li><strong>Homepage:</strong> Your journey begins at our welcoming homepage.</li>
+      <li><strong>Register:</strong> Create an account with your name, email, and password.</li>
+      <li><strong>OTP Verification:</strong> Verify your account using a One-Time Password sent to your email or phone.</li>
+    </ul>
+
+    <h2>2. Planning Your Trip</h2>
+    <ul>
+      <li><strong>Select Region:</strong> Choose between global destinations or specific countries.</li>
+      <li><strong>Seasonal Plans:</strong> Browse seasonal travel plans like summer getaways and winter retreats using our smart search bar.</li>
+      <li><strong>Choose Destination:</strong> Pick your travel spot from our curated list.</li>
+      <li><strong>Stay Duration:</strong> Enter how many days you'll be staying.</li>
+    </ul>
+
+    <h2>3. Booking Your Accommodation</h2>
+    <ul>
+      <li><strong>Hotels:</strong> View hotels along with their prices and ratings.</li>
+      <li><strong>Select Hotel:</strong> Choose your ideal hotel from the list.</li>
+      <li><strong>Hotel Details:</strong> See detailed information, including nearby attractions.</li>
+    </ul>
+
+    <h2>4. Choosing Your Travel Method</h2>
+    <ul>
+      <li><strong>Modes of Travel:</strong> Pick between Train, Bus, or Flights.</li>
+      <li><strong>Transport Options:</strong> View all available routes and options based on your preference.</li>
+    </ul>
+
+    <h2>5. Your Personalized Package</h2>
+    <p>Once everything is selected, we compile a comprehensive package for you that includes:</p>
+    <ul>
+      <li>Flight or transport tickets</li>
+      <li>Hotel bookings</li>
+      <li>Tour guide details</li>
+      <li>Detailed itinerary including:
+        <ul>
+          <li>Arrival and check-in time</li>
+          <li>Tour guide meeting time</li>
+          <li>Scheduled attraction visits</li>
+        </ul>
+      </li>
+      <li>Total price for the package</li>
+    </ul>
+
+    <h2>6. Final Steps</h2>
+    <ul>
+      <li><strong>Plan Delivery:</strong> Click a button to receive the full travel plan in one day.</li>
+      <li><strong>Email Confirmation:</strong> We email your full itinerary and payment options within 24 hours.</li>
+      <li><strong>Ticket Delivery:</strong> After payment, we send your tickets, bookings, and tour guide details within a day.</li>
+    </ul>
+
+    <p style="margin-top: 2rem;">We make travel planning simple, secure, and personalized—so you can focus on enjoying your journey!</p>
+  </div>
+
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbea;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+header {
+  background-color: #f4c542;
+  color: #333;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fffdf5;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    .review {
+      border-bottom: 1px solid #eee0aa;
+      padding: 1rem 0;
+    }
+    .stars {
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
+    .review:last-child {
+      border-bottom: none;
+    }
+    form {
+      margin-top: 2rem;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      border: 1px solid #ffd966;
+      background-color: #fffbe0;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #ffcf33;
+      background-color: #fffacd;
+    }
+    button {
+      background-color: #f4c542;
+      color: #333;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #e6b800;
+    }
+  </style>
+</head>
+<body>
+  <!-- Public Reviews Heading -->
+<section class="px-8 py-6 bg-white">
+  <h2 class="text-3xl md:text-4xl font-heading text-gray-800 tracking-wide relative inline-block">
+    Public Reviews
+    <span class="absolute left-0 -bottom-1 w-full h-1 bg-yellow-300 rounded-md"></span>
+  </h2>
+</section>
+
+
+  <div class="container">
+  <h2 style="font-weight: 800;">What Our Users Are Saying</h2>
+
+    <div class="review">
+      <p><strong>Namratha K.</strong> - <span class="stars">★★★★★</span></p>
+      <p>The seasonal plans are amazing! We booked a winter retreat and everything was perfectly organized, from the hotel to the guided tours. Highly recommend!</p>
+    </div>
+
+    <div class="review">
+      <p><strong>Bhuvana K.</strong> - <span class="stars">★★★★☆</span></p>
+      <p>The OTP verification process was smooth. The email with the travel plan came exactly in a day as promised!</p>
+    </div>
+
+    <div class="review">
+      <p><strong>Vedasri </strong> - <span class="stars">★★★★★</span></p>
+      <p>Very user-friendly experience. I could compare hotel ratings and pick the best. The tour guide was very knowledgeable.</p>
+    </div>
+
+    <!-- Review Submission Form -->
+    <h2>Leave a Review</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="rating">Rating</label>
+      <select id="rating" required>
+        <option value="">Choose a rating</option>
+        <option value="5">★★★★★ - Excellent</option>
+        <option value="4">★★★★☆ - Good</option>
+        <option value="3">★★★☆☆ - Average</option>
+        <option value="2">★★☆☆☆ - Poor</option>
+        <option value="1">★☆☆☆☆ - Terrible</option>
+      </select>
+
+      <label for="message">Your Review</label>
+      <textarea id="message" rows="5" placeholder="Share your experience..." required></textarea>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+
+ </body>
+</html>

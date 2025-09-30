@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Search</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hotel Search in India 🇮🇳</h1>
+
+    <!-- Search Form -->
+    <form action="/search" method="POST">
+      <input type="text" name="city" placeholder="Enter a city (e.g., Mumbai, Delhi)" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Error message -->
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <!-- Hotels List -->
+    <% if (hotels && hotels.length > 0) { %>
+      <div class="hotel-list">
+        <% hotels.forEach(hotel => { %>
+          <div class="hotel-card">
+            <img src="<%= hotel.imageUrl || '/hotel-placeholder.jpg' %>" alt="<%= hotel.name %>">
+
+            <h2><%= hotel.name %></h2>
+            <p><%= hotel.address %></p>
+            <p class="price">₹<%= hotel.priceMin %> / night</p>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Node / React / Python / Firebase
+node_modules/
+*.env
+*.json
+*.log
+.DS_Store

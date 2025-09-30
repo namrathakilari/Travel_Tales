@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Booking - Radisson Agra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      background-color: white;
+      padding: 15px 30px;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #fdbd2d;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      gap: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      flex: 1;
+      min-width: 350px;
+    }
+
+    .summary-box, .fare-box {
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .summary-box {
+      background-color: #fffbe6;
+    }
+
+    .fare-box {
+      background-color: #ffe6e6;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .strikethrough {
+      text-decoration: line-through;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Travel Tales</div>
+
+<div class="container">
+  <!-- Booking Summary -->
+  <div class="section">
+    <div class="summary-box">
+      <div class="title">🏨 Booking Summary</div>
+      <p><span class="highlight">Hotel:</span> Radisson, Agra</p>
+      <p><span class="highlight">Check-in:</span> 13 Apr, 2:00 PM</p>
+      <p><span class="highlight">Check-out:</span> 15 Apr, 12:00 PM</p>
+      <p><span class="highlight">Guests:</span> 2 Adults, 1 Room</p>
+      <p><span class="highlight">Room Type:</span> Deluxe King Room, Breakfast Included</p>
+    </div>
+
+    <!-- Fare Summary -->
+    <div class="fare-box">
+      <div class="title">💰 Fare Summary</div>
+      <p><span class="highlight">Fare Type:</span> Non-Refundable</p>
+      <p><span class="highlight">Base Fare:</span> ₹18,585</p>
+      <p><span class="highlight">Taxes & Fees:</span> ₹1,800</p>
+      <p><span class="highlight">Instant Off:</span> -₹500</p>
+      <p class="highlight">Total Amount: ₹20,885</p>
+    </div>
+  </div>
+
+  <!-- Refund Policy -->
+  <div class="section">
+    <div class="summary-box">
+      <div class="title">🔁 Refund on Cancellation</div>
+      <p>This booking is <span class="highlight">Non-Refundable</span>.</p>
+      <p>Any cancellation after booking will result in 100% cancellation charges.</p>
+    </div>
+
+    <p style="font-size: 18px; margin-top: 20px;">
+      <span class="highlight">₹20,885</span>
+    </p>
+    <button class="button" onclick="location.href='file:///C:/Users/Namratha%20Kilari/OneDrive/Desktop/TRAVEL%20TALES/mode.html'">Continue</button>
+  </div>
+</div>
+
+</body>
+</html>

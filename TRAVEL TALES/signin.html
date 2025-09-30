@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In - Travel Tales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header {
+      position: fixed;
+      top: 20px;
+      left: 30px;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
+      color: #f4c542;
+      z-index: 1000;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .registration-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      color: #f4c542;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .container {
+  max-width: 500px; /* Reduced from 850px */
+  width: 95%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    input {
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ffd966;
+      background-color: #fffbe0;
+      font-size: 0.95rem;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #f4c542;
+      background-color: #fffacd;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.6rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #f4c542;
+      color: #333;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e6b800;
+    }
+
+    .otp-section {
+      display: none;
+      width: 100%;
+    }
+
+    .note {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        font-size: 2rem;
+        top: 15px;
+        left: 20px;
+      }
+
+      .registration-title {
+        font-size: 1.6rem;
+      }
+
+      .container {
+        padding: 1.2rem;
+      }
+    }
+ 
+  </style>
+</head>
+<body>
+  <div class="header">Travel Tales</div>
+
+  <div class="container">
+    <h2>Sign into Your Account</h2>
+    <form id="signin-form">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <button id="loginButton">Sign In</button>
+
+      <script type="module" src="C:\Users\Namratha Kilari\OneDrive\Desktop\TRAVEL TALES\server.js"></script>
+      <p class="note">
+        Don't have an account? <a href="register.html" style="color: #f4c542; font-weight: bold; text-decoration: none;">Sign up here</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBEaxmpuNHv1mpls_fn2Ph_JtmZHVE_hC4",
+      authDomain: "travel-tales-40327.firebaseapp.com",
+      projectId: "travel-tales-40327",
+      storageBucket: "travel-tales-40327.appspot.com",
+      messagingSenderId: "553948671245",
+      appId: "1:553948671245:web:cf61fc5fd61cd45c1ed444",
+      measurementId: "G-X0X4KHHN71"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    document.getElementById("signin-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          alert("Login successful!");
+
+          fetch('http://localhost:3000/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: userCredential.user.email, 
+            }),
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to send email');
+            }
+            return response.text();
+          })
+          .then(message => {
+            console.log('✅ Email sent successfully:', message);
+            window.location.href = "travelhomepage.html"; 
+          })
+          .catch(error => {
+            console.error('❌ Error sending email:', error);
+            window.location.href = "travelhomepage.html";
+          });
+        })
+        .catch((error) => {
+          alert("Login failed: " + error.message);
+        });
+    });
+  </script>
+</body>
+</html>
